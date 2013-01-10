@@ -127,7 +127,7 @@ module ParserHelper
   require 'net/http'
   require 'uri'
   # Code for #fetch is from http.rb [Jon Aquino 2005-07-16]
-  def fetch( uri_str, limit = 10 )
+  def fetch( uri_str, limit = 30 )
     # You should choose better exception.
     raise ArgumentError, 'HTTP redirect too deep' if limit == 0
     response = get_response(URI.parse(uri_str))
